@@ -3,7 +3,10 @@
 import { hash } from "./hash"
 import { salt } from "./salt"
 
+/*
 hash.hashAction();
 console.log();
+*/
 
 salt.signup("random@random.com", "password123");
+console.log(salt.login("random@random.com", "password123"));
