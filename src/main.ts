@@ -3,6 +3,8 @@
 import { hash } from "./hash"
 import { salt } from "./salt"
 import { hmacAction } from "./hmac";
+import { symmetricEncryption } from "./symmetric-encryption";
+import { asymmetricKeyPair } from "./keypair";
 
 /*
 hash.hashAction();
@@ -14,4 +16,8 @@ salt.signup("random@random.com", "password123");
 console.log(salt.login("random@random.com", "password123"));
 */
 
-hmacAction();
+// hmacAction();
+
+// symmetricEncryption();
+
+asymmetricKeyPair();
