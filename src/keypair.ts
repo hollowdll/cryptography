@@ -6,7 +6,7 @@
 
 import { generateKeyPairSync } from "crypto";
 
-export const asymmetricKeyPair = () => {
+export const createAsymmetricKeyPair = () => {
     const { publicKey, privateKey } = generateKeyPairSync("rsa", {
         modulusLength: 2048,    // Length of key in bits
         publicKeyEncoding: {
@@ -16,13 +16,16 @@ export const asymmetricKeyPair = () => {
         privateKeyEncoding: {
             type: "pkcs8",
             format: "pem",
-            cipher: "aes-256-cbc",
-            passphrase: "very secret, yet top secret",
+            // cipher: "aes-256-cbc",
+            // passphrase: "top secret",
         }
     });
     
     console.log(publicKey);
     console.log(privateKey);
 
-
+    return {
+        publicKey,
+        privateKey,
+    }
 }

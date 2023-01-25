@@ -4,7 +4,8 @@ import { hash } from "./hash"
 import { salt } from "./salt"
 import { hmacAction } from "./hmac";
 import { symmetricEncryption } from "./symmetric-encryption";
-import { asymmetricKeyPair } from "./keypair";
+import { asymmetricEncryption } from "./asymmetric-encryption";
+import { digitalSignature } from "./digital-signature";
 
 /*
 hash.hashAction();
@@ -20,4 +21,6 @@ console.log(salt.login("random@random.com", "password123"));
 
 // symmetricEncryption();
 
-asymmetricKeyPair();
+// asymmetricEncryption();
+
+digitalSignature();
